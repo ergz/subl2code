@@ -13,6 +13,20 @@ filepath = args.file
 source_type = args.to
 supported_source = ["subl", "code"]
 
+
+def get_source_type(filepath):
+    print("inferred subl source")
+    return "subl"
+
+
+def to_subl(filepath):
+    return "{test}"
+
+
+def to_code(filepath):
+    return "{test, settings}"
+
+
 if not source_type:
     source_type = get_source_type(filepath)
 else:
